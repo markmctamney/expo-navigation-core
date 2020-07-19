@@ -35,8 +35,8 @@ export default function useRouting<RProp extends DefaultRouteProp = DefaultRoute
             as?: string | undefined;
         } | undefined;
     }>(route: To_1) => void;
-    goBack: () => any;
-    params: any;
+    goBack: () => void;
+    params: object | undefined;
     prefetch: (routeName: string) => void;
     popToTop: any;
     replace: <To_2 extends {
@@ -56,5 +56,5 @@ export default function useRouting<RProp extends DefaultRouteProp = DefaultRoute
             as?: string | undefined;
         } | undefined;
     }>({ routeName, params }: To_2) => void;
-    setParams: any;
+    setParams: (params: object | undefined) => void;
 };
